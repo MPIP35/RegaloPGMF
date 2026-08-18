@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FELIZ CUMPLEAÑOS 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+
+    <!-- 1. INTRO -->
+    <section class="screen active" id="intro">
+      <div class="pixel-cloud c1"></div><div class="pixel-cloud c2"></div>
+      <div class="birthday-card">
+        <div class="cake">🎂</div>
+        <p class="small-label">Mi sorpresa para ti</p>
+        <h1>¡Feliz cumpleaños!</h1>
+        <p class="subtitle">Lo hice solo para ti...</p>
+        <button class="pixel-btn" data-go="code">ABRIR REGALO</button>
+      </div>
+    </section>
+
+    <!-- 2. CLAVE -->
+    <section class="screen" id="code">
+      <div class="code-card">
+        <div class="lock">🔐</div>
+        <h2>Una pequeña contraseña...</h2>
+        <p>Adivina, no todo es tan facil, querida.</p>
+        <div class="code-display" id="codeDisplay">_ _ _ _</div>
+        <div class="keypad">
+          <button>1</button><button>2</button><button>3</button>
+          <button>4</button><button>5</button><button>6</button>
+          <button>7</button><button>8</button><button>9</button>
+          <button class="clear">⌫</button><button>0</button><button class="enter">✓</button>
+        </div>
+        <p class="hint">Pista: Dia de Barritos <strong>un dia, un mes.</strong> Ya, suficientes pistas <code>😉</code>.</p>
+      </div>
+    </section>
+
+    <!-- 3. MUNDO / MENU -->
+    <section class="screen world" id="world">
+      <div class="sun"></div>
+      <div class="pixel-tree tree1"></div><div class="pixel-tree tree2"></div>
+      <div class="ground"></div>
+
+      <div class="world-title">
+        <span>UN PEQUEÑO REGALO</span>
+        <h2>Solo para ti</h2>
+      </div>
+
+      <div class="menu-island">
+        <button class="world-item" data-go="music"><span>💿</span><b>MÚSICA</b></button>
+        <button class="world-item" data-go="photos"><span>📷</span><b>RECUERDOS</b></button>
+        <button class="world-item" data-go="letter"><span>💌</span><b>CARTA</b></button>
+        <button class="world-item" data-go="final"><span>🌟</span><b>SORPRESA</b></button>
+      </div>
+    </section>
+
+    <!-- 4. MUSIC -->
+    <section class="screen dark-screen" id="music">
+      <button class="back" data-go="world">← Volver</button>
+      <div class="music-player">
+        <div class="vinyl-wrap"><div class="vinyl"><div class="vinyl-center">♥</div></div></div>
+        <p class="eyebrow">UNA ULTIMA CANCIÓN</p>
+        <h2>Una canción especial</h2>
+        <p class="muted">Una que elegi por ambos</p>
+        <input id="audioFile" type="file" accept="audio/*" hidden>
+        <button class="pixel-btn" id="chooseAudio">Gracias Amor - Orquesta Matecana</button>
+        <audio audio controls src = "Cancion MF/Cancion 1.mp3"></audio>
+      </div>
+    </section>
+
+    <!-- 5. PHOTOS -->
+    <section class="screen" id="photos">
+      <button class="back dark" data-go="world">← Volver</button>
+      <div class="album">
+        <p class="eyebrow">NUESTROS RECUERDOS</p>
+        <h2>PASADO</h2>
+        <p class="muted">Un ultimo viaje por nuestras memorias.</p>
+        <div class="photo-grid">
+          <label class="photo"><img src="Fotos MF/Foto 2.jpg" alt="Recuerdo"><span>📷<br>Foto 01</span></label>
+          <label class="photo"><img src="Fotos MF/Foto 7.jpg" alt="Recuerdo"><span>📷<br>Foto 02</span></label>
+          <label class="photo"><img src="Fotos MF/Foto 1.jpg" alt="Recuerdo"><span>📷<br>Foto 03</span></label>
+          <label class="photo"><img src="Fotos MF/Foto 5.jpg" alt="Recuerdo"><span>📷<br>Foto 04</span></label>
+          <label class="photo"><img src="Fotos MF/Foto 6.jpg" alt="Recuerdo"><span>📷<br>Foto 05</span></label>
+          <label class="photo"><img src="Fotos MF/Foto 3.jpg" alt="Recuerdo"><span>📷<br>Foto 06</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. LETTER -->
+    <section class="screen letter-screen" id="letter">
+      <button class="back dark" data-go="world">← Volver</button>
+      <article class="letter">
+        <div class="flower">🌸</div>
+        <p class="eyebrow">PARA TI</p>
+        <h2>Mi Ultima Carta</h2>
+        <p>
+          Hoy quiero recordarte lo especial que eres y siempre has sido.
+          Una persona que llego a cambiar mi vida y yo la de ella.
+          Quiero que siempre recuerdes que tu escensia es simplemente
+          Inmarcesible.
+          Tambien quiero agradecerte por cada momento,sonrisa,
+          cada recuerdo que dejaste en mi vida.
+        </p>
+        <p>
+          Espero que este nuevo año de tu vida esté lleno de aventuras,
+          sueños cumplidos y muchísimas razones para sonreír.
+        </p>
+        <p class="signature">Te amo mucho 💖,<br><strong>Una persona de por ahi ♥</strong></p>
+      </article>
+    </section>
+
+    <!-- 7. FINAL -->
+    <section class="screen final-screen" id="final">
+      <div class="stars"></div>
+      <div class="final-photo">💖</div>
+      <p class="eyebrow">ERES UNA MUJER VIRTUOSA</p>
+      <h1>¡FELIZ CUMPLEAÑOS!<br><span>Maria</span></h1>
+      <p>Que todos tus deseos se hagan realidad ✨</p>
+      <button class="pixel-btn" data-go="intro">VOLVER A EMPEZAR</button>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
